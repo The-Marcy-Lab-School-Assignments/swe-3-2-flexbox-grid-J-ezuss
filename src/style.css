@@ -1,3 +1,7 @@
+
+/* ================================ */
+/* Add your CSS below this line */
+/* ================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +9,8 @@
 }
 
 img {
+  display: block;
   width: 100%;
-}
-
-ul {
-  list-style: none;
 }
 
 body {
@@ -19,8 +20,17 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 1px solid #d1d1d1;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  padding-right: 40px;
 }
 
 nav > a {
@@ -28,6 +38,7 @@ nav > a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
 nav > a:hover {
@@ -38,11 +49,52 @@ header > input {
   padding: 10px 20px;
 }
 
+section {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+aside > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  list-style: none;
+}
+
+figcaption {
+  font-weight: bold;
+  gap: 50px;
+}
+
+.imagesection {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  flex-grow: 1;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .imagesection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .imagesection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+h1 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 footer {
   border-top: 1px solid #d1d1d1;
   padding-top: 20px;
 }
 
-/* ================================ */
-/* Add your CSS below this line */
-/* ================================ */
